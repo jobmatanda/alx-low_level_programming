@@ -31,9 +31,11 @@ void times_table(void)
 			{
 				_putchar(',');
 				_putchar(' ');
-		i	}
+			}
 		}
 		_putchar('\n');
 	}
 
 }
+Footer
+© 2023 GitHub, Inc.
