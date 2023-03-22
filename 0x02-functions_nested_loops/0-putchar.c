@@ -5,14 +5,8 @@
  *
  * Return: Always 0 (Success)
  */
-int main(void)
+int _putchar(char c)
 {
-	char MyName[9] = "_putchar";
-	int i;
-
-	for (i = 0; i < 9; i++)
-		_putchar(MyName[i]);
-	_putchar('\n');
-
-	return (0);
+	return (write(1, &c, 1));
+	
 }
