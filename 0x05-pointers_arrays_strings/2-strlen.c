@@ -1,18 +1,22 @@
-#include <stddef.h>
 #include "main.h"
 
 /**
- * _strlen - Returns the length of a string.
- * @str: The string to get the length of.
+ * _strncpy - this fuction will concatenates two strings
+ * @dest: the string that will modified.
+ * @src: the string that ill be concatenated to @des.
+ * @n: how much to copy from src into dest.
  *
- * Return: The length of @str.
+ * Return: a pointer to @des
  */
-size_t _strlen(const char *str)
+char *_strncpy(char *dest, char *src, int n)
 {
-	size_t length = 0;
+	int i_01 = 0;
 
-	while (*str++)
-		length++;
+	for (i_01 = 0; i_01 < n && src[i_01] != '\0'; i_01++)
+		dest[i_01] = src[i_01];
+	for ( ; i_01 < n ; i_01++)
+		dest[i_01] = '\0';
 
-	return (length);
+	return (dest);
 }
+
