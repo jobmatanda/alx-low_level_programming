@@ -11,7 +11,7 @@ void print_all(const char * const format, ...)
 
 	va_list list;
 
-	mwanzo(list, format);
+	va_start(list, format);
 
 	if (format)
 	{
@@ -44,5 +44,5 @@ void print_all(const char * const format, ...)
 	}
 
 	printf("\n");
-	mwisho(list);
+	va_end(list);
 }
