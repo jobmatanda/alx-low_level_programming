@@ -12,7 +12,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	va_list list;
 
-	mwanzo(list, n);
+	va_start(list, n);
 
 	for (i = 0; i < n; i++)
 	{
@@ -29,5 +29,5 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	printf("\n");
 
-	mwisho(list);
+	va_end(list);
 }
